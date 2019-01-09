@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" onkeyup="press()"/>
+  </form>
+  <script type="text/javascript">
+    function press() {
+        var lastName = document.getElementById('lastname').value;
+      alert("Vous avez appuyé sur " + lastName);
+    }
+  </script>
+</body>
+</html>

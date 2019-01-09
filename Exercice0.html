@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+	<input type="text" id="foo" value="Allo!" />
+</form>
+
+<script type="text/javascript">
+
+var elem = document.getElementById("foo");
+
+// Attention : afficherMessage(); ou afficherMessage(param); ne fonctionneront pas ici,
+// il doit s'agir d'une référence au nom d'une fonction et non d'un appel de cette fonction
+
+elem.onblur = afficherMessage;
+
+function afficherMessage() {
+	alert("Évènement onblur detecté!");
+}
+</script>
+</body>
+</html>
