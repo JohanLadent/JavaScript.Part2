@@ -8,13 +8,19 @@
 </head>
 <body>
   <form>
-    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" />
+    <label for="lastname">Votre nom  : </label><input type="text" name="lastname" id="lastname" onblur="afficherMessage()"/>
   </form>
   <script type="text/javascript">
-  var elem = document.getElementById('lastname').value;
-  elem.onblur=afficherMessage;
+  // var elem = document.getElementById('lastname').value;
+  // elem.onblur=afficherMessage;
   function afficherMessage() {
-    alert("Merci de votre participation");
+    var name = document.getElementById('lastname').value;
+    if(name.length > 0){
+     alert("Merci de votre participation");
+    }
+    else {
+      alert("Veuillez renseigner votre nom")
+    }
   }
   </script>
 </body>
